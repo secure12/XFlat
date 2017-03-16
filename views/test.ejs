@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <% include templates/header.ejs %>
+
+    <h1><%= videodata.categoryName %></h1>
+    <ul>
+      <% videodata.categories.forEach(function (item){ %>
+        <li><a href="https://thenewboston.com/videos_food.php?cat=<%= item.categoryID %>">
+          <%= item.categoryName %>
+        </a></li>
+      <% }); %>
+    </ul>
+    <p>Hello everyone my name is <font color="red"><%= name %></font></p>
+    <img src="http://www.smogon.com/forums/attachments/image-jpg.38425/" alt="snorlax desu" style="width:256px; height:128px;">
+    <ul>
+      <% for (var i=0; i<5; i++) { %>
+        <li>kawaii <3</li>
+      <% } %>
+    </ul>
+
+    <h1>
+      <a href="https://keep.edu.hk">Click here to go to KEEP</a>
+    </h1>
+  </body>
+</html>
